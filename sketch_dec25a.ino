@@ -12,7 +12,7 @@ int counter;
 void setup() {
   // put your setup code here, to run once:
 
-    counter = 0;
+    counter = 1;
 
     // start the arduboy properly and display the arduboy(tm) logo
     arduboy.begin();
@@ -35,7 +35,9 @@ void loop() {
 
     // increment the counter (efficiently)
     // prefix equivalent to counter = counter + 1 or counter++
-    ++counter;
+    // ++counter;
+    // increment counter in powers of two
+    counter = counter + counter;
 
     // print out the value of the counter
     arduboy.print(counter);
